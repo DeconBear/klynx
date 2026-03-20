@@ -1,0 +1,12 @@
+include LICENSE
+include README.md
+recursive-include klynx/skills *
+include klynx/mcp_servers.json.example
+prune build
+prune dist
+prune klynx.egg-info
+prune klynx/skills/system/skill-creator/scripts/__pycache__
+prune klynx/skills/system/skill-installer/scripts/__pycache__
+recursive-exclude klynx __pycache__ *
+recursive-exclude klynx *.py[cod]
+global-exclude *.py[cod]

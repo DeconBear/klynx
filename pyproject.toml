@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "klynx"
+version = "0.0.20"
+description = "A sophisticated, universal agentic AI coding framework built on LangGraph and LiteLLM."
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+  { name="QZX", email="qzx480@gmail.com" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "litellm>=1.40.0",
+    "langchain-core>=0.2.0",
+    "langgraph>=0.2.0",
+    "httpx>=0.25.0",
+    "openai>=1.30.0",
+    "pydantic>=2.7.0",
+    "rich>=13.0.0",
+    "playwright>=1.40.0",
+    "textual>=0.70.0",
+    "pyte>=0.8.2",
+    "python-dotenv>=1.0.0",
+    "tomli>=2.0.1; python_version < '3.11'"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/qzx/klynx"
+"Bug Tracker" = "https://github.com/qzx/klynx/issues"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["klynx*"]
+exclude = ["tests*", "tutorials*"]
+
+[tool.setuptools.package-data]
+klynx = [
+    "**/*.json",
+    "**/*.txt",
+    "**/*.md",
+    "**/*.yaml",
+    "**/*.yml",
+    "**/*.png",
+    "**/*.svg",
+]
+
+[tool.setuptools.exclude-package-data]
+klynx = [
+    "**/*.py[cod]",
+    "**/__pycache__/*",
+]

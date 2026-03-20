@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "sqlite_server": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-sqlite",
+        "--db",
+        "./test.db"
+      ],
+      "env": {}
+    },
+    "fetch_web": {
+      "command": "node",
+      "args": [
+        "/path/to/fetch-server/index.js"
+      ]
+    }
+  }
+}    
